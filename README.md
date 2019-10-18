@@ -53,7 +53,7 @@ Here is an example of how you might use an eloquent model with Checkboxes.
 use Silvanite\NovaFieldCheckboxes\Checkboxes;
 
 Checkboxes::make('users')
-    ->options(App\User::pluck('name', 'id'))
+    ->options(App\User::pluck('name', 'id')->toArray())
     ->withoutTypeCasting(),
 ```
 
